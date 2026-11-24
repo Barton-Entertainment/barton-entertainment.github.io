@@ -15,6 +15,9 @@ License), dark first, one warm lamp color.
 
 ## Snooze Tones privacy policy
 
+The policy waits on the `privacy-policy` branch until the company details exist. Fill the
+placeholders there, check them with the grep below, and merge it into `main` to publish.
+
 ```
 Fill every [[PLACEHOLDER]] before publishing. They use double square brackets, not double braces,
 because Jekyll would read {{...}} as Liquid and silently print nothing. Before merging, check that
