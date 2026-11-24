@@ -1,0 +1,8 @@
+title: Barton Entertainment
+url: https://barton-entertainment.github.io
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+exclude:
+  - README.md

@@ -1,0 +1,87 @@
+/* Colors and type follow the Snooze Tones design system: dark first, one warm lamp, cream ink. */
+
+@font-face { font-family: Nunito; font-weight: 400; font-display: swap; src: url("fonts/Nunito_400Regular.ttf") format("truetype"); }
+@font-face { font-family: Nunito; font-weight: 700; font-display: swap; src: url("fonts/Nunito_700Bold.ttf") format("truetype"); }
+@font-face { font-family: Nunito; font-weight: 800; font-display: swap; src: url("fonts/Nunito_800ExtraBold.ttf") format("truetype"); }
+
+:root {
+  --ground: #16120f;
+  --surface: #211a15;
+  --line: #3a3029;
+  --ink: #ebdfce;
+  --ink-muted: #b5a491;
+  --lamp: #f0a458;
+  --lamp-soft: #3a2614;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --ground: #f7f0e6;
+    --surface: #fffaf3;
+    --line: #e6dacb;
+    --ink: #2b2119;
+    --ink-muted: #69584a;
+    --lamp: #9a5216;
+    --lamp-soft: #f6e3ce;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--ground); }
+
+body {
+  margin: 0 auto;
+  max-width: 44rem;
+  padding: 0 1.25rem;
+  color: var(--ink);
+  font: 400 1.0625rem/1.65 Nunito, system-ui, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+a { color: var(--lamp); text-underline-offset: 0.18em; }
+a:focus-visible { outline: 2px solid var(--lamp); outline-offset: 3px; border-radius: 4px; }
+
+.site-header { padding: 1.75rem 0 0.5rem; }
+.wordmark { color: var(--ink); font-weight: 800; letter-spacing: -0.01em; text-decoration: none; }
+
+.site-footer {
+  margin-top: 4rem;
+  padding: 1.5rem 0 2.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink-muted);
+  font-size: 0.875rem;
+}
+
+/* Landing page */
+
+.home h1 { font-size: 2rem; line-height: 1.2; font-weight: 800; letter-spacing: -0.015em; margin: 2.5rem 0 0.5rem; }
+.home .lede { color: var(--ink-muted); margin: 0 0 2.5rem; }
+
+.app-card {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1.5rem;
+}
+.app-card img { width: 4.5rem; height: 4.5rem; border-radius: 1.1rem; }
+.app-card h2 { font-size: 1.25rem; font-weight: 800; margin: 0; line-height: 1.3; }
+.app-card p { margin: 0.25rem 0 0; }
+.app-card .status { color: var(--ink-muted); font-size: 0.9375rem; }
+.app-card ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; padding: 0; margin: 0.75rem 0 0; font-size: 0.9375rem; font-weight: 700; }
+
+/* Long documents (privacy policy) */
+
+.doc h1 { font-size: 2rem; line-height: 1.2; font-weight: 800; letter-spacing: -0.015em; margin: 2.5rem 0 0.75rem; }
+.doc h2 { font-size: 1.3125rem; line-height: 1.3; font-weight: 800; margin: 2.75rem 0 0.5rem; }
+.doc h3 { font-size: 1.0625rem; font-weight: 800; margin: 2rem 0 0.25rem; }
+.doc p, .doc ul { margin: 0.75rem 0; }
+.doc ul { padding-left: 1.25rem; }
+.doc li { margin: 0.3rem 0; }
+.doc li::marker { color: var(--ink-muted); }
+.doc strong { font-weight: 700; }
+.doc hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
